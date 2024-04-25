@@ -1,0 +1,19 @@
+{
+  "name": "ejercicio-practico",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.8.1"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
