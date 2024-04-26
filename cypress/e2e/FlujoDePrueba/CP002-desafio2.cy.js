@@ -8,11 +8,13 @@ beforeEach(() => {
   });
 
 describe('CP002 - Aplicar filtro de equipos', function(){
-    it('Filtrar por Memoria Interna de 128GB y precio entre $200.00 - $300.000', function(){
-        cy.viewport('samsung-s10')
-        //Visitar la página de Movistar
+    before(function(){
         cy.visit('https://tiendaonline.movistar.com.ar')
-
+        cy.url().should('include', 'https://tiendaonline.movistar.com.ar'); 
+        cy.viewport('samsung-s10');
+    })
+    
+    it('Filtrar por Memoria Interna de 128GB y precio entre $200.00 - $300.000', function(){
         //Filtros
         prueba2.getFilter().should('be.visible').click();
         prueba2.getMemory128GB().should('be.visible').click();

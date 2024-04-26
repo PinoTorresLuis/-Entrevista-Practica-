@@ -3,7 +3,7 @@ export default class validacionPruebas2{
      filter = '.block-subtitle';
      memory128GB = '[data-value="802"] > a';
      price_20000_30000 = '[data-value="200000_300000"] > a';
-    total_equipos = '.total-products > p';
+     total_equipos = '.total-products > p';
 
      getFilter(){
         return cy.get(this.filter);
