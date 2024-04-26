@@ -1,10 +1,10 @@
-import validacionPruebas3 from "../pageObjets/prueba3.js";
-const prueba3 = new validacionPruebas3
+import validacionPruebas3 from "../pageObjets/validation3.js";
+const prueba3 = new validacionPruebas3;
 
 beforeEach(() => {
-    cy.clearAllLocalStorage()
-    cy.clearAllSessionStorage()
-    cy.clearCookies()
+    cy.clearAllLocalStorage();
+    cy.clearAllSessionStorage();
+    cy.clearCookies();
   });
 
 describe('CP003 - Validar cuotas en compra de equipo -Cuotas.60 -Equipo.Tercero de la lista - Banco.Credicoop -Tarjeta.Visa', function(){
