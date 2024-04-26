@@ -4,7 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open --browser chrome --e2e"
   },
   "keywords": [],
   "author": "",
