@@ -1,10 +1,11 @@
-export default class TestFunction1{
+export default class TestValidations1{
     mobile_SA14 ='[data-id="14908"]';
     financing = '.financing';
 
     findMobile(){
-        cy.get(this.mobile_SA14).should('be.visible')
-        cy.contains('A14').click()
+        cy.get(this.mobile_SA14).should('be.visible').then(()=>{
+        cy.contains('A14').click();
+        })
     }
 
     getFinancing(){

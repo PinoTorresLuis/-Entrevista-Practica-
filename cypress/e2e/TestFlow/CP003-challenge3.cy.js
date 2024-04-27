@@ -15,7 +15,6 @@ describe('CP003 - Validar cuotas en compra de equipo -Cuotas.60 -Equipo.Tercero 
     })
 
     it('Que el equipo seleccionado sea el tercero de la lista', ()=>{
-        //Find
         prueba3.getTercerEquipo();
         prueba3.getBotonCuotas();
         prueba3.seleccionar_banco_y_tarjeta();
