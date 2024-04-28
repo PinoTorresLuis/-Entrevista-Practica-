@@ -3,9 +3,8 @@ export default class TestValidations1{
     financing = '.financing';
 
     findMobile(){
-        cy.get(this.mobile_SA14).should('be.visible').then(()=>{
+        cy.get(this.mobile_SA14).should('be.visible');
         cy.contains('A14').click();
-        })
     }
 
     getFinancing(){

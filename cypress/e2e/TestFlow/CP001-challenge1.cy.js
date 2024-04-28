@@ -1,12 +1,6 @@
 import TestValidations1 from "../pageObjets/validation1.js";
 const test1 = new TestValidations1;
 
-beforeEach(() => {
-    cy.clearAllLocalStorage();
-    cy.clearAllSessionStorage();
-    cy.clearCookies();
-  });
-
 describe('CP001- Validar cuotas en compra de equipo', function(){
     before(function(){
         cy.visit('https://tiendaonline.movistar.com.ar');

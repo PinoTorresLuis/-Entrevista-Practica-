@@ -1,42 +1,38 @@
 export default class TestValidations4{
     mobile_MotoG13 = '[data-id="16702"]';
-    button_select = '#swatch_attribute_card';
+    btn_select = '#swatch_attribute_card';
     cart_text = '[data-ui-id="checkout-cart-validationmessages-message-success"]';
-    button_purchase = '.item > .action';
-    form = '#checkout';
-    email = '[name="custom_email"]';
-    name = '[name="firstname"]';
-    last_name ='[name="lastname"';
+    btn_purchase = '[data-role="proceed-to-checkout"]';
+    btn_showCart = '.showcart';
+    btn_homepage = '.logo > img';
+    delet_product = '.product-item-details > .actions > .secondary > .action';
+    confirm_delet = '.action-primary';
+    count_number = '.counter-number';
         
     //Añadiste Motorola Moto G13 128Gb 4G a tu carrito de compras.    
     findMobilePhone(){
-       return cy.get(this.mobile_MotoG13).should('be.visible').then(()=>{
+       cy.get(this.mobile_MotoG13).should('be.visible')
            cy.contains('Moto G13 128Gb 4G').click();
-           cy.get(this.button_select).click();
-       });
+           cy.get(this.btn_select).click();
+   
     }
-    checkout_item(){
-        cy.get(this.cart_text).should('have.text','Añadiste Motorola Moto G13 128Gb 4G a tu carrito de compras.')
-        cy.get(this.button_purchase).click();
-      
+    checkout_cart(){
+       cy.get(this.cart_text).should('have.text','Añadiste Motorola Moto G13 128Gb 4G a tu carrito de compras.')
+        cy.get(this.btn_homepage).should('be.visible').click();
+     
+    }
+    delet_cart(){
+       cy.get(this.btn_showCart).should('be.visible').click()
+       cy.get(this.delet_product).should('be.visible').click();
+       cy.get(this.confirm_delet).should('be.visible').click();
+        
     }
 
-    complete_Form(){
-        cy.get(this.form).should('be.visible').then(()=>{
-            cy.get(this.email).find(this.email).type('test1@gmail.com');
-            cy.get(this.name).type('luis');
-            cy.get(this.last_name).type('pino');
-        });
+    checkout_cart_empty(){
+       cy.get(this.count_number).should('not.be.visible');
+          //  cy.get(this.text).should('have.text','No tienes ningún artículo en tu carrito de compras.')
+    
     }
+
 
 }
-/* 
-cy.get(this.cart_text).should('be.visible').then(($cart) => {
-    const text = $cart.text();
-    if (text.includes('Añadiste Motorola Moto G13 128Gb 4G a tu carrito de compra')) {
-        cy.log('Producto agregado correctamente');
-        cy.get(this.button_purchase).click();
-    } else {
-        cy.log('Hubo un error en la selección del producto');
-    }
-}) */

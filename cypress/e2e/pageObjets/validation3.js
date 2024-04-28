@@ -1,7 +1,7 @@
 export default class validacionPruebas3{
-    tercer_equipo ='[data-id="12784"] > a';
-    boton_calcular_cuotas ='#open-installments-modal';
-    modal_pago_cuotas ='#installments-modal > .content';
+    third_device ='#maincontent > div.columns > div > div:nth-child(3) > div:nth-child(5) > div > div > div.content-products > div > ol > li:nth-child(3)';
+    open_installment ='#open-installments-modal';
+    modal_pay_installment ='#installments-modal > .content';
     banco_selector ='#bankSelector';
     tarjeta_selector ='#cardSelector';
     calcular_cuotas ='#calculate_btn > .btn-primary';
@@ -9,14 +9,14 @@ export default class validacionPruebas3{
     tarjeta_visa = '[data-card="Visa"]';
     tabla_cuotas = '#bodyTable';
 
-    getTercerEquipo(){
-        return cy.get(this.tercer_equipo).click();
+    getThirdDevice(){
+        return cy.get(this.third_device).click();
     }
-    getBotonCuotas (){
-        return cy.get(this.boton_calcular_cuotas).click();
+    openInstallmentBtn(){
+        return cy.get(this.open_installment).click();
     }
-    seleccionar_banco_y_tarjeta(){
-        return cy.get(this.modal_pago_cuotas).should('be.visible').then(()=>{
+    selectBankAndCard(){
+        return cy.get(this.modal_pay_installment).should('be.visible').then(()=>{
             cy.get(this.banco_selector).click();
             cy.get(this.banco_credicoop).should('exist').click();
             cy.get(this.tarjeta_selector).click();
@@ -25,7 +25,7 @@ export default class validacionPruebas3{
         })
     }
 
-    calcular_Cuotas(){
+    calculateInstallments(){
         let cuotas_60 =false;
         cy.get(this.tabla_cuotas)
         .find('tr')
@@ -51,3 +51,15 @@ export default class validacionPruebas3{
 
 }
 
+/* calculateInstallments(){
+    cy.get(this.tabla_cuotas)
+        .find('tr')
+        .then((rows) => {
+            const cuotas_60 = Array.from(rows).some((row) => {
+                const cellText = Cypress.$(row).find('td').eq(0).text();
+                return cellText === '60 cuotas sin interés de';
+            });
+
+            expect(cuotas_60, 'Banco Credicop y tarjeta Visa deberían tener 60 cuotas').to.be.true;
+        });
+} */
