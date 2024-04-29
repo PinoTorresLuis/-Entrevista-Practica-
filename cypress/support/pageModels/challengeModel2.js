@@ -1,4 +1,4 @@
-export default class TestValidations2{
+export default class ChallengeModel2{
      memory128GB = '[data-value="802"] > a';
      price_20000_30000 = '[data-value="200000_300000"] > a';
      total_quantity = '.total-products > p';

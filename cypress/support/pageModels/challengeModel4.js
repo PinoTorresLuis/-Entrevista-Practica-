@@ -1,4 +1,4 @@
-export default class TestValidations4{
+export default class challengeModel4{
     mobile_MotoG13 = '[data-id="16702"]';
     btn_select = '#swatch_attribute_card';
     cart_text = '[data-ui-id="checkout-cart-validationmessages-message-success"]';
@@ -30,8 +30,6 @@ export default class TestValidations4{
 
     checkout_cart_empty(){
        cy.get(this.count_number).should('not.be.visible');
-          //  cy.get(this.text).should('have.text','No tienes ningún artículo en tu carrito de compras.')
-    
     }
 
 

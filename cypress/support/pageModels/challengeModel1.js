@@ -1,4 +1,4 @@
-export default class TestValidations1{
+export default class ChallengeModel1{
     mobile_SA14 ='[data-id="14908"]';
     financing = '.financing';
 

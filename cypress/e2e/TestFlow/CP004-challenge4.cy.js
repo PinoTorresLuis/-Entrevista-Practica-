@@ -1,5 +1,5 @@
-import TestValidations4 from "../pageObjets/validations4.js";
-const test4 = new TestValidations4;
+import ChallengeModel4 from "../../support/pageModels/challengeModel4.js";
+const challenge4 = new ChallengeModel4;
 
 
 describe('CP004-Verificar que el formulario de compra esté completado en su totalidad para poder continuar con la compra',function(){
@@ -8,11 +8,11 @@ describe('CP004-Verificar que el formulario de compra esté completado en su tot
         cy.url().should('include','https://tiendaonline.movistar.com.ar');
         cy.viewport('samsung-s10');
     })
-    it('Seleccionar un equipo celular y completar formulario',()=>{
-        test4.findMobilePhone();
-        test4.checkout_cart();
-        test4.delet_cart();
-        test4.checkout_cart_empty();
+    it('Seleccionando equipo, chequeando que se haya agregado correctamente y el formulario deberia fallar',()=>{
+        challenge4.findMobilePhone();
+        challenge4.checkout_cart();
+        challenge4.delet_cart();
+        challenge4.checkout_cart_empty();
     })
 })
 
