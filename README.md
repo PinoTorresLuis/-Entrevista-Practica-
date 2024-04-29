@@ -9,6 +9,8 @@ Resultado esperado:
 - Que el equipo seleccionado sea el A14
 - Que se indique en el equipo que puede ser pagado en 3 cuotas sin interes
 De no estar disponible el equipo A14 tomar alguno que si lo esté.
+
+
 <span style="color:blue">CP002</span> - Aplicar filtro de equipos -Memoria Interna.128GB -Precio Entre 200Ky300K
 Descripción: El objetivo del caso de prueba es visitar la tienda de Movistar
 (https://tiendaonline.movistar.com.ar), luego utilizando los filtros de la página, filtrar por
@@ -18,6 +20,8 @@ Resultado esperado:
 - Que se pueda ingresar a la página indicada
 - Que se pueda aplicar los filtros
 - Que se obtengan equipos luego del filtrado validando la cantidad mostrada
+
+
 <span style="color:blue">CP003</span> - Validar cuotas en compra de equipo -Cuotas.60 -Equipo.Tercero de la lista -
 Banco.Credicoop -Tarjeta.Visa
 Descripción: El objetivo del caso de prueba es visitar la tienda de Movistar
@@ -29,6 +33,8 @@ Resultado esperado:
 - Que el equipo seleccionado sea el tercero de la lista
 - Que no exista un medio de pago con 60 cuotas para el banco Credicoop con tarjeta
 VISA
+
+
 <span style="color:blue">CP004</span> - Agregar un caso que creas conveniente plantear y sea diferente a los 3 anteriores: 
 Validar que el carrito esté vacio al eliminar el producto del mismo, Equipo Moto G13, ViewPort :Samsung-s10. 
 Resultado esperado:
@@ -36,6 +42,7 @@ Resultado esperado:
 - La pagina este en modo responsive.
 - Que el equipo agregado al carrito sea el correcto
 - Que se elimine correctamente el equipo del carrito
+
 
 <span style="color:blue">CP005</span> - Verificar que no se pueda finalizar la compra sin que el formulario esté completo y que aparezca el mensaje de alerta.Equipo.A14.
 - Que se pueda ingresar a la página indicada
