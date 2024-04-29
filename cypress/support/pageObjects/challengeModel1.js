@@ -8,7 +8,7 @@ export default class ChallengeModel1{
     }
 
     getFinancing(){
-        cy.get(this.financing).invoke('text').then((text) => {
+        cy.get(this.financing).first().invoke('text').then((text) => {
             cy.log('Texto encontrado: ' + text);
           });
     }
